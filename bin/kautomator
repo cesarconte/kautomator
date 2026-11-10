@@ -1,0 +1,131 @@
+#!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Cesar <yugurta@gmail.com>
+# SPDX-License-Identifier: GPL-3.0-or-later
+"""
+kautomator: CLI de automatización y gestión de Smart Folder Rules (Hazel para KDE Plasma 6).
+"""
+
+import sys
+import os
+import argparse
+import subprocess
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+PROJECT_DIR = SCRIPT_DIR.parent
+if (PROJECT_DIR / "src").exists():
+    LIB_DIR = PROJECT_DIR
+else:
+    LIB_DIR = Path.home() / ".local/share/kautomator"
+
+sys.path.insert(0, str(LIB_DIR / "src"))
+
+from rules import load_rules, ensure_config_exists, RULES_FILE
+from engine import process_directory, watch_directories
+
+
+def cmd_run(args, rules):
+    """Ejecuta las reglas sobre una carpeta o sobre todas las carpetas vigiladas."""
+    if args.folder:
+        folder = Path(args.folder).resolve()
+        count = process_directory(folder, rules)
+        print(f"✨ Procesamiento completado: {count} archivo(s) organizado(s) en '{folder.name}'.")
+    else:
+        watched_dirs = set(r["watch"] for r in rules)
+        total = 0
+        for wdir in watched_dirs:
+            total += process_directory(wdir, rules)
+        print(f"✨ Procesamiento completado en todos los directorios: {total} archivo(s) organizado(s).")
+
+
+def cmd_watch(args, rules):
+    """Ejecuta el monitor continuo inotify."""
+    watch_directories(rules)
+
+
+def cmd_list(args, rules):
+    """Muestra la lista de reglas configuradas."""
+    print("📋 REGLAS ACTIVAS DE KAUTOMATOR:")
+    print("-" * 75)
+    for i, r in enumerate(rules, 1):
+        exts = ", ".join(r["extensions"]) if r["extensions"] else "Cualquiera"
+        act = r["action"]
+        dest = f" -> {r['destination']}" if r["destination"] else ""
+        tag = f" [Etiqueta: {r['tag']}]" if r["tag"] else ""
+        print(f"{i}. {r['name']}")
+        print(f"   Vigilando:    {r['watch']}")
+        print(f"   Extensiones:  {exts}")
+        print(f"   Acción:       {act}{dest}{tag}")
+        print("-" * 75)
+
+
+def cmd_status(args, rules):
+    """Muestra el estado del servicio systemd y las carpetas vigiladas."""
+    print("🔍 ESTADO DE KAUTOMATOR")
+    print("=" * 50)
+    print(f"Configuración: {RULES_FILE}")
+    print(f"Reglas cargadas: {len(rules)}")
+
+    # Estado de systemd user service
+    res = subprocess.run(
+        ["systemctl", "--user", "is-active", "kautomator.service"],
+        capture_output=True, text=True
+    )
+    status = res.stdout.strip()
+    icon = "🟢" if status == "active" else "⚪"
+    print(f"Servicio systemd: {icon} {status} (kautomator.service)")
+
+
+def cmd_edit(args, rules):
+    """Abre el archivo de configuración en el editor predeterminado."""
+    target = ensure_config_exists()
+    editor = os.environ.get("EDITOR", "xdg-open")
+    subprocess.run([editor, str(target)])
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="kautomator: Smart Folder Rules & Automatización para KDE Plasma 6"
+    )
+    subparsers = parser.add_subparsers(dest="command", help="Comandos disponibles")
+
+    # Comando 'run'
+    p_run = subparsers.add_parser("run", help="Organiza los archivos inmediatamente")
+    p_run.add_argument("folder", nargs="?", type=str, help="Carpeta a procesar (por defecto: todas las configuradas)")
+
+    # Comando 'watch'
+    subparsers.add_parser("watch", help="Inicia el monitor en segundo plano (inotify)")
+
+    # Comando 'list'
+    subparsers.add_parser("list", help="Lista las reglas activas")
+
+    # Comando 'status'
+    subparsers.add_parser("status", help="Muestra el estado del servicio")
+
+    # Comando 'edit'
+    subparsers.add_parser("edit", help="Abre el archivo de reglas en el editor")
+
+    parser.add_argument("-v", "--version", action="version", version="KAutomator 1.0.0")
+
+    args = parser.parse_args()
+
+    ensure_config_exists()
+    rules = load_rules()
+
+    if args.command == "run":
+        cmd_run(args, rules)
+    elif args.command == "watch":
+        cmd_watch(args, rules)
+    elif args.command == "list":
+        cmd_list(args, rules)
+    elif args.command == "status":
+        cmd_status(args, rules)
+    elif args.command == "edit":
+        cmd_edit(args, rules)
+    else:
+        # Por defecto si no se pasa comando: ejecutar run
+        cmd_run(argparse.Namespace(folder=None), rules)
+
+
+if __name__ == "__main__":
+    main()

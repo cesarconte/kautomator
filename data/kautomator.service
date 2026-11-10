@@ -1,0 +1,13 @@
+[Unit]
+Description=KAutomator: Smart Folder Rules & File Automation for KDE Plasma 6
+Documentation=https://github.com/cesarconte/kautomator
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/kautomator watch
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=default.target

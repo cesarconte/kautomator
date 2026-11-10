@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Service
+MimeType=inode/directory;
+X-KDE-Protocols=file
+Actions=organizeNow;configureRules;
+X-KDE-Submenu=KAutomator
+X-KDE-Submenu[en]=KAutomator
+
+[Desktop Action organizeNow]
+Name=Organizar esta carpeta con KAutomator
+Name[en]=Organize this folder with KAutomator
+Icon=folder-sync
+Exec=kautomator run %f
+
+[Desktop Action configureRules]
+Name=Configurar reglas inteligentes (rules.toml)
+Name[en]=Configure smart rules (rules.toml)
+Icon=configure
+Exec=kautomator edit
