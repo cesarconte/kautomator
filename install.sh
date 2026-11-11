@@ -34,7 +34,12 @@ mkdir -p "${SHARE_DIR}/src"
 cp -r "${SCRIPT_DIR}/src/"* "${SHARE_DIR}/src/"
 echo "  ✓ Módulos de reglas y motor inotify instalados en ${SHARE_DIR}"
 
-# 3. Instalar ejecutable CLI
+# 3. Compilar e instalar interfaz gráfica Golden Gate (kautomator-gui) y ejecutable CLI
+cmake -B "${SCRIPT_DIR}/build" -S "${SCRIPT_DIR}" -DCMAKE_INSTALL_PREFIX="${HOME}/.local" >/dev/null
+cmake --build "${SCRIPT_DIR}/build" -j"$(nproc)" >/dev/null
+cmake --install "${SCRIPT_DIR}/build" >/dev/null
+echo "  ✓ Interfaz gráfica Golden Gate (kautomator-gui) instalada en ${BIN_DIR}/kautomator-gui"
+
 mkdir -p "$BIN_DIR"
 install -m 755 "${SCRIPT_DIR}/bin/kautomator" "${BIN_DIR}/kautomator"
 echo "  ✓ Binario instalado en ${BIN_DIR}/kautomator"

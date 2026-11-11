@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=Application
 Name=KAutomator
-GenericName=Smart Folder Rules & File Automation
-GenericName[es]=Reglas Inteligentes y Automatización de Archivos
-Comment=Hazel-style smart folder automation and file organization for KDE Plasma 6
-Comment[es]=Organización automática de carpetas con reglas inteligentes al estilo Hazel
-Exec=kautomator edit
+GenericName=Shortcuts & Smart Folder Automation
+GenericName[es]=Flujos de Trabajo y Automatización Inteligente
+Comment=macOS Golden Gate Shortcuts & Hazel-style smart folder automation for KDE Plasma 6
+Comment[es]=Flujos de trabajo y organización automática de carpetas estilo macOS Golden Gate
+Exec=kautomator gui
 Icon=folder-sync
 Terminal=false
 Categories=Utility;System;FileTools;
