@@ -1,0 +1,12 @@
+/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/uninstall.dir
+/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/fetch-translations.dir
+/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/kautomator-gui.dir
+/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/test.dir
+/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/edit_cache.dir
+/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/rebuild_cache.dir
+/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/list_install_components.dir
+/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/install.dir
+/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/install/local.dir
+/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/install/strip.dir
+/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/kautomator-gui_autogen_timestamp_deps.dir
+/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/kautomator-gui_autogen.dir

@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     app.setOrganizationName(QStringLiteral("Cesar"));
     app.setOrganizationDomain(QStringLiteral("cesar.org"));
     app.setDesktopFileName(QStringLiteral("org.cesar.kautomator"));
-    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("folder-sync")));
+    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("org.cesar.kautomator"), QIcon::fromTheme(QStringLiteral("folder-sync"))));
 
     QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
 

@@ -1,0 +1,12 @@
+# ninja log v7
+2	212	1794649359036568724	kautomator-gui_autogen/timestamp	9c2ebbcacda899ba
+2	212	1794649359036568724	kautomator-gui_autogen/mocs_compilation.cpp	9c2ebbcacda899ba
+2	212	1794649359036568724	/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/kautomator-gui_autogen/timestamp	9c2ebbcacda899ba
+2	212	1794649359036568724	/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/kautomator-gui_autogen/mocs_compilation.cpp	9c2ebbcacda899ba
+213	235	1794649359065567959	kautomator-gui_autogen/MXUWEOXILK/qrc_resources.cpp	1e7dfc1715b1e70d
+213	235	1794649359065567959	/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/kautomator-gui_autogen/MXUWEOXILK/qrc_resources.cpp	1e7dfc1715b1e70d
+235	252	1794649359068146501	CMakeFiles/kautomator-gui.dir/kautomator-gui_autogen/MXUWEOXILK/qrc_resources.cpp.o	57ca4452d785bc5d
+235	1211	1794649359066567932	CMakeFiles/kautomator-gui.dir/kautomator-gui_autogen/mocs_compilation.cpp.o	6cacdba0011a2d0a
+235	1269	1794649359067995681	CMakeFiles/kautomator-gui.dir/src/gui/main.cpp.o	9cda972fdc14cac9
+235	2312	1794649359068077006	CMakeFiles/kautomator-gui.dir/src/gui/automatorbackend.cpp.o	80d9b76e14834bb9
+2312	2516	1794649361143513209	bin/kautomator-gui	7de50e9f4867d999
