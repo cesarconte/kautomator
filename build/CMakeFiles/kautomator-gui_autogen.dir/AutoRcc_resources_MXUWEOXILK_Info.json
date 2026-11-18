@@ -9,7 +9,11 @@
 	"INCLUDE_DIR" : "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/kautomator-gui_autogen/include",
 	"INPUTS" : 
 	[
-		"/run/media/cesar/Seagate/Linux/Proyectos/kautomator/src/gui/qml/Main.qml"
+		"/run/media/cesar/Seagate/Linux/Proyectos/kautomator/src/gui/qml/Main.qml",
+		"/run/media/cesar/Seagate/Linux/Proyectos/kautomator/src/gui/qml/AiIntelligenceCard.qml",
+		"/run/media/cesar/Seagate/Linux/Proyectos/kautomator/src/gui/qml/WorkflowCardGrid.qml",
+		"/run/media/cesar/Seagate/Linux/Proyectos/kautomator/src/gui/qml/AutomatorSidebar.qml",
+		"/run/media/cesar/Seagate/Linux/Proyectos/kautomator/src/gui/qml/WorkflowEditorInspector.qml"
 	],
 	"LOCK_FILE" : "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/kautomator-gui_autogen.dir/AutoRcc_resources_MXUWEOXILK_Lock.lock",
 	"MULTI_CONFIG" : false,
