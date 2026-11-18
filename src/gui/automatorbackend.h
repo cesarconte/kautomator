@@ -6,9 +6,14 @@
 #pragma once
 
 #include <QObject>
+#include <QString>
 #include <QVariantList>
 #include <QVariantMap>
-#include <QNetworkAccessManager>
+
+class WorkflowRepository;
+class WorkflowRunner;
+class DaemonController;
+class AiWorkflowAssistant;
 
 class AutomatorBackend : public QObject
 {
@@ -38,20 +43,21 @@ class AutomatorBackend : public QObject
 
 public:
     explicit AutomatorBackend(QObject *parent = nullptr);
+    ~AutomatorBackend() override;
 
-    QVariantList workflows() const { return m_workflows; }
+    QVariantList workflows() const;
     QVariantList filteredWorkflows() const;
 
-    QString currentCategory() const { return m_currentCategory; }
+    QString currentCategory() const;
     void setCurrentCategory(const QString &cat);
 
-    QString searchQuery() const { return m_searchQuery; }
+    QString searchQuery() const;
     void setSearchQuery(const QString &q);
 
     QString viewMode() const { return m_viewMode; }
     void setViewMode(const QString &mode);
 
-    QString selectedWorkflowId() const { return m_selectedWorkflowId; }
+    QString selectedWorkflowId() const;
     void setSelectedWorkflowId(const QString &id);
     QVariantMap selectedWorkflow() const;
 
@@ -61,11 +67,11 @@ public:
     int menuBarCount() const;
     int automationCount() const;
 
-    QString aiCardHeadline() const { return m_aiCardHeadline; }
-    QString aiCardQuote() const { return m_aiCardQuote; }
-    QString aiCardSubtext() const { return m_aiCardSubtext; }
-    bool aiBusy() const { return m_aiBusy; }
-    bool daemonActive() const { return m_daemonActive; }
+    QString aiCardHeadline() const;
+    QString aiCardQuote() const;
+    QString aiCardSubtext() const;
+    bool aiBusy() const;
+    bool daemonActive() const;
 
     Q_INVOKABLE void runWorkflow(const QString &id, const QString &fileUrl = QString());
     Q_INVOKABLE bool workflowNeedsFile(const QString &id) const;
@@ -97,21 +103,10 @@ Q_SIGNALS:
     void fileSelectionRequested(const QString &workflowId, const QString &title);
 
 private:
-    void loadWorkflows();
-    void saveWorkflows();
-    void refreshDaemonStatus();
-    void notifyDesktop(const QString &title, const QString &body);
+    WorkflowRepository *m_repo = nullptr;
+    WorkflowRunner *m_runner = nullptr;
+    DaemonController *m_daemonController = nullptr;
+    AiWorkflowAssistant *m_aiAssistant = nullptr;
 
-    QNetworkAccessManager *m_nam = nullptr;
-    QVariantList m_workflows;
-    QString m_currentCategory = QStringLiteral("all");
-    QString m_searchQuery;
     QString m_viewMode = QStringLiteral("grid");
-    QString m_selectedWorkflowId = QStringLiteral("wf_new_1");
-
-    QString m_aiCardHeadline = QStringLiteral("Shortcuts can't download and install apps from the Internet.");
-    QString m_aiCardQuote = QStringLiteral("\"Find apps in the App Store\"");
-    QString m_aiCardSubtext = QStringLiteral("Describe a change below to generate or customize a workflow with local AI.");
-    bool m_aiBusy = false;
-    bool m_daemonActive = false;
 };

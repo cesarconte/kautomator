@@ -1,5 +1,9 @@
 <RCC>
     <qresource prefix="/">
         <file alias="qml/Main.qml">qml/Main.qml</file>
+        <file alias="qml/AutomatorSidebar.qml">qml/AutomatorSidebar.qml</file>
+        <file alias="qml/WorkflowCardGrid.qml">qml/WorkflowCardGrid.qml</file>
+        <file alias="qml/AiIntelligenceCard.qml">qml/AiIntelligenceCard.qml</file>
+        <file alias="qml/WorkflowEditorInspector.qml">qml/WorkflowEditorInspector.qml</file>
     </qresource>
 </RCC>

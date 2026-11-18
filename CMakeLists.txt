@@ -35,8 +35,16 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
 
 add_executable(kautomator-gui
     src/gui/main.cpp
+    src/gui/aiworkflowassistant.cpp
+    src/gui/aiworkflowassistant.h
     src/gui/automatorbackend.cpp
     src/gui/automatorbackend.h
+    src/gui/daemoncontroller.cpp
+    src/gui/daemoncontroller.h
+    src/gui/workflowrepository.cpp
+    src/gui/workflowrepository.h
+    src/gui/workflowrunner.cpp
+    src/gui/workflowrunner.h
     src/gui/resources.qrc
 )
 
