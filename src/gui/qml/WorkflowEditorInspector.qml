@@ -6,7 +6,6 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
-import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 import CachyOS.UI
 
@@ -18,19 +17,19 @@ ColumnLayout {
 
     spacing: 10
 
-    Text {
+    CachyLabel {
         Layout.fillWidth: true
         elide: Text.ElideRight
         text: "Editar flujo seleccionado"
         font.pixelSize: 14
         font.weight: Font.Bold
-        color: CachyTheme.textPrimary
+        color: CachyPalette.text
     }
 
-    Text {
+    CachyLabel {
         text: "Nombre del flujo:"
         font.pixelSize: 11
-        color: CachyTheme.textSecondary
+        color: CachyPalette.textSecondary
     }
     CachyTextField {
         id: editTitleField
@@ -38,10 +37,10 @@ ColumnLayout {
         text: root.backend.selectedWorkflow.title || ""
     }
 
-    Text {
+    CachyLabel {
         text: "Descripción:"
         font.pixelSize: 11
-        color: CachyTheme.textSecondary
+        color: CachyPalette.textSecondary
     }
     CachyTextField {
         id: editSubtitleField
@@ -49,22 +48,22 @@ ColumnLayout {
         text: root.backend.selectedWorkflow.subtitle || ""
     }
 
-    Text {
+    CachyLabel {
         text: "Categoría:"
         font.pixelSize: 11
-        color: CachyTheme.textSecondary
+        color: CachyPalette.textSecondary
     }
-    QQC2.ComboBox {
+    CachyComboBox {
         id: editCategoryCombo
         Layout.fillWidth: true
         model: ["quick_actions", "share_sheet", "menu_bar", "automation"]
         currentIndex: Math.max(0, model.indexOf(root.backend.selectedWorkflow.category || "quick_actions"))
     }
 
-    Text {
+    CachyLabel {
         text: "Color de tarjeta:"
         font.pixelSize: 11
-        color: CachyTheme.textSecondary
+        color: CachyPalette.textSecondary
     }
     RowLayout {
         spacing: 8
@@ -89,10 +88,10 @@ ColumnLayout {
         text: root.backend.selectedWorkflow.color || "#0091FF"
     }
 
-    Text {
+    CachyLabel {
         text: "Comando ejecutable ({file}, {noext}):"
         font.pixelSize: 11
-        color: CachyTheme.textSecondary
+        color: CachyPalette.textSecondary
     }
     CachyTextField {
         id: editCommandField
@@ -108,7 +107,8 @@ ColumnLayout {
 
         CachyButton {
             Layout.fillWidth: true
-            text: "▶ Ejecutar"
+            iconName: "media-playback-start"
+            text: "Ejecutar"
             onClicked: root.backend.runWorkflow(root.backend.selectedWorkflowId)
         }
 
@@ -121,7 +121,7 @@ ColumnLayout {
                     root.backend.selectedWorkflowId,
                     editTitleField.text,
                     editSubtitleField.text,
-                    editCategoryCombo.currentText,
+                    editCategoryCombo.displayText,
                     editColorDummy.text,
                     editCommandField.text
                 );

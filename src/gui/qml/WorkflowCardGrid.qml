@@ -190,11 +190,10 @@ ColumnLayout {
                                     onTapped: root.backend.runWorkflow(wfCard.modelData.id)
                                 }
 
-                                Text {
+                                CachyIcon {
                                     anchors.centerIn: parent
-                                    text: wfCard.isSelected ? "+" : "▶"
-                                    font.pixelSize: wfCard.isSelected ? 14 : 10
-                                    font.bold: true
+                                    name: wfCard.isSelected ? "list-add" : "media-playback-start"
+                                    size: wfCard.isSelected ? 12 : 10
                                     color: runBtnHover.hovered ? (wfCard.modelData.color || "#0091FF") : "#FFFFFF"
                                 }
                             }

@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: kautomator
-# Configurations: Release
+# Configurations: Debug
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for generating CXX dependencies.
 
-rule CXX_SCAN__kautomator-gui_Release
+rule CXX_SCAN__kautomator-gui_Debug
   depfile = $DEP_FILE
   command = /usr/bin/c++ $DEFINES $INCLUDES $FLAGS -E -x c++ $in -MT $DYNDEP_INTERMEDIATE_FILE -MD -MF $DEP_FILE -fmodules-ts -fdeps-file=$DYNDEP_INTERMEDIATE_FILE -fdeps-target=$OBJ_FILE -fdeps-format=p1689r5 -o $PREPROCESSED_OUTPUT_FILE
   description = Scanning $in for CXX dependencies
@@ -23,7 +23,7 @@ rule CXX_SCAN__kautomator-gui_Release
 #############################################
 # Rule to generate ninja dyndep files for CXX.
 
-rule CXX_DYNDEP__kautomator-gui_Release
+rule CXX_DYNDEP__kautomator-gui_Debug
   command = /usr/bin/cmake -E cmake_ninja_dyndep --tdi=CMakeFiles/kautomator-gui.dir/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
@@ -34,7 +34,7 @@ rule CXX_DYNDEP__kautomator-gui_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__kautomator-gui_scanned_Release
+rule CXX_COMPILER__kautomator-gui_scanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/c++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -fmodules-ts -fmodule-mapper=$DYNDEP_MODULE_MAP_FILE -MD -fdeps-format=p1689r5 -x c++ -o $out -c $in
@@ -44,7 +44,7 @@ rule CXX_COMPILER__kautomator-gui_scanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__kautomator-gui_unscanned_Release
+rule CXX_COMPILER__kautomator-gui_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/c++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -54,7 +54,7 @@ rule CXX_COMPILER__kautomator-gui_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__kautomator-gui_Release
+rule CXX_EXECUTABLE_LINKER__kautomator-gui_Debug
   command = $PRE_LINK && /usr/bin/c++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -72,7 +72,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/run/media/cesar/Seagate/Linux/Proyectos/kautomator -B/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build
+  command = /usr/bin/cmake --regenerate-during-build -S/home/cesar/Proyectos/kautomator -B/home/cesar/Proyectos/kautomator/build
   description = Re-running CMake...
   generator = 1
 

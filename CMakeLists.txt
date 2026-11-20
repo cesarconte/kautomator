@@ -62,3 +62,8 @@ target_link_libraries(kautomator-gui PRIVATE
 )
 
 install(TARGETS kautomator-gui ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(PROGRAMS bin/kautomator DESTINATION ${KDE_INSTALL_BINDIR})
+install(DIRECTORY src/ DESTINATION ${KDE_INSTALL_DATADIR}/kautomator/src FILES_MATCHING PATTERN "*.py")
+install(FILES data/kautomator.service DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
+install(FILES data/kautomator_servicemenu.desktop DESTINATION ${KDE_INSTALL_DATADIR}/kio/servicemenus RENAME org.cesar.kautomator.desktop)
+install(FILES data/org.cesar.kautomator.desktop DESTINATION ${KDE_INSTALL_APPDIR})

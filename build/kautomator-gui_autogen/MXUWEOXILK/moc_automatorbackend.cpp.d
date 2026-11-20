@@ -1,5 +1,5 @@
-/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/kautomator-gui_autogen/MXUWEOXILK/moc_automatorbackend.cpp: /run/media/cesar/Seagate/Linux/Proyectos/kautomator/src/gui/automatorbackend.h \
-  /run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/kautomator-gui_autogen/moc_predefs.h \
+/home/cesar/Proyectos/kautomator/build/kautomator-gui_autogen/MXUWEOXILK/moc_automatorbackend.cpp: /home/cesar/Proyectos/kautomator/src/gui/automatorbackend.h \
+  /home/cesar/Proyectos/kautomator/build/kautomator-gui_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \

@@ -1,10 +1,10 @@
 cmake_policy(VERSION 3.16)
 
-if(NOT EXISTS "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: /run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/install_manifest.txt")
+if(NOT EXISTS "/home/cesar/Proyectos/kautomator/build/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: /home/cesar/Proyectos/kautomator/build/install_manifest.txt")
 endif()
 
-file(READ "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/install_manifest.txt" files)
+file(READ "/home/cesar/Proyectos/kautomator/build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 foreach(file ${files})
     message(STATUS "Uninstalling $ENV{DESTDIR}${file}")

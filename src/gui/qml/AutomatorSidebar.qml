@@ -19,7 +19,7 @@ ColumnLayout {
     CachySidebarItem {
         Layout.fillWidth: true
         text: "Gallery"
-        iconGlyph: "⊞"
+        iconName: "view-grid"
         iconColor: "#007AFF"
         selected: root.backend.currentCategory === "gallery"
         onClicked: root.backend.currentCategory = "gallery"
@@ -28,7 +28,7 @@ ColumnLayout {
     CachySidebarItem {
         Layout.fillWidth: true
         text: "Automation"
-        iconGlyph: "⏱"
+        iconName: "chronometer"
         iconColor: "#34C759"
         badgeText: root.backend.daemonActive ? "ON" : "OFF"
         selected: root.backend.currentCategory === "automation"
@@ -37,18 +37,18 @@ ColumnLayout {
 
     Item { Layout.preferredHeight: 8 }
 
-    Text {
+    CachyLabel {
         Layout.leftMargin: 10
         text: "Library"
         font.pixelSize: 11
         font.weight: Font.DemiBold
-        color: CachyTheme.textMuted
+        color: CachyPalette.textMuted
     }
 
     CachySidebarItem {
         Layout.fillWidth: true
         text: "All Shortcuts"
-        iconGlyph: "❖"
+        iconName: "applications-system"
         iconColor: "#007AFF"
         badgeText: root.backend.allShortcutsCount.toString()
         selected: root.backend.currentCategory === "all"
@@ -58,7 +58,7 @@ ColumnLayout {
     CachySidebarItem {
         Layout.fillWidth: true
         text: "Share Sheet"
-        iconGlyph: "⤴"
+        iconName: "document-share"
         iconColor: "#5E5CE6"
         badgeText: root.backend.shareSheetCount.toString()
         selected: root.backend.currentCategory === "share_sheet"
@@ -68,7 +68,7 @@ ColumnLayout {
     CachySidebarItem {
         Layout.fillWidth: true
         text: "Quick Actions"
-        iconGlyph: "⚡"
+        iconName: "quickopen"
         iconColor: "#FF9F0A"
         badgeText: root.backend.quickActionsCount.toString()
         selected: root.backend.currentCategory === "quick_actions"
@@ -78,7 +78,7 @@ ColumnLayout {
     CachySidebarItem {
         Layout.fillWidth: true
         text: "Menu Bar"
-        iconGlyph: "⌘"
+        iconName: "preferences-system"
         iconColor: "#AF52DE"
         badgeText: root.backend.menuBarCount.toString()
         selected: root.backend.currentCategory === "menu_bar"
@@ -93,7 +93,7 @@ ColumnLayout {
     CachyToolbarButton {
         Layout.fillWidth: true
         iconName: "preferences-desktop-keyboard"
-        text: "⌨ Atajos del Sistema"
+        text: "Atajos del Sistema"
         tooltipText: "Abrir Preferencias del Sistema → Teclado → Atajos (sin duplicidades)"
         onClicked: root.backend.openSystemKeyboardShortcuts()
     }

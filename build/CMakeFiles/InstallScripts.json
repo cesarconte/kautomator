@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/cmake_install.cmake"
+		"/home/cesar/Proyectos/kautomator/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

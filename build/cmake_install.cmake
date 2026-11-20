@@ -1,4 +1,4 @@
-# Install script for directory: /run/media/cesar/Seagate/Linux/Proyectos/kautomator
+# Install script for directory: /home/cesar/Proyectos/kautomator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -49,7 +49,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "kautomator" OR NOT CMAKE_INSTALL_COMPONENT)
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/kautomator-gui"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/bin/kautomator-gui")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/cesar/Proyectos/kautomator/build/bin/kautomator-gui")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/kautomator-gui" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/kautomator-gui")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -58,10 +58,30 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "kautomator" OR NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
+if(CMAKE_INSTALL_COMPONENT STREQUAL "kautomator" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE PROGRAM FILES "/home/cesar/Proyectos/kautomator/bin/kautomator")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "kautomator" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kautomator/src" TYPE DIRECTORY FILES "/home/cesar/Proyectos/kautomator/src/" FILES_MATCHING REGEX "/[^/]*\\.py$")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "kautomator" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/systemd/user" TYPE FILE FILES "/home/cesar/Proyectos/kautomator/data/kautomator.service")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "kautomator" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kio/servicemenus" TYPE FILE RENAME "org.cesar.kautomator.desktop" FILES "/home/cesar/Proyectos/kautomator/data/kautomator_servicemenu.desktop")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "kautomator" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications" TYPE FILE FILES "/home/cesar/Proyectos/kautomator/data/org.cesar.kautomator.desktop")
+endif()
+
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/install_local_manifest.txt"
+  file(WRITE "/home/cesar/Proyectos/kautomator/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -77,6 +97,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/cesar/Proyectos/kautomator/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

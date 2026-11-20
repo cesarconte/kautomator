@@ -61,8 +61,7 @@ CachyWindow {
             anchors.verticalCenter: parent.verticalCenter
 
             CachyToolbarButton {
-                iconName: "folder-symbolic"
-                text: "📁"
+                iconName: "folder"
                 tooltipText: "Editar reglas Smart Folder (~/.config/kautomator/rules.toml)"
                 onClicked: if (root.backend) root.backend.openRulesFileInEditor()
             }
@@ -120,13 +119,13 @@ CachyWindow {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         radius: 11
-                        color: (root.backend && root.backend.viewMode === "grid") ? CachyTheme.cardBackgroundHover : "transparent"
+                        color: (root.backend && root.backend.viewMode === "grid") ? CachyPalette.cardBackgroundHover : "transparent"
 
-                        Text {
+                        CachyIcon {
                             anchors.centerIn: parent
-                            text: "⊞"
-                            font.pixelSize: 13
-                            color: CachyTheme.textPrimary
+                            name: "view-grid"
+                            size: 13
+                            color: (root.backend && root.backend.viewMode === "grid") ? CachyTheme.accentColor : CachyPalette.text
                         }
 
                         TapHandler { onTapped: if (root.backend) root.backend.viewMode = "grid" }
@@ -136,13 +135,13 @@ CachyWindow {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         radius: 11
-                        color: (root.backend && root.backend.viewMode === "list") ? CachyTheme.cardBackgroundHover : "transparent"
+                        color: (root.backend && root.backend.viewMode === "list") ? CachyPalette.cardBackgroundHover : "transparent"
 
-                        Text {
+                        CachyIcon {
                             anchors.centerIn: parent
-                            text: "☰"
-                            font.pixelSize: 12
-                            color: CachyTheme.textPrimary
+                            name: "view-list-details"
+                            size: 13
+                            color: (root.backend && root.backend.viewMode === "list") ? CachyTheme.accentColor : CachyPalette.text
                         }
 
                         TapHandler { onTapped: if (root.backend) root.backend.viewMode = "list" }
@@ -169,7 +168,6 @@ CachyWindow {
 
             CachyToolbarButton {
                 iconName: "document-share"
-                text: "⤴"
                 tooltipText: "Copiar flujo seleccionado al portapapeles (JSON)"
                 onClicked: if (root.backend) root.backend.exportWorkflow(root.backend.selectedWorkflowId)
             }
@@ -198,10 +196,10 @@ CachyWindow {
                     anchors.rightMargin: 8
                     spacing: 6
 
-                    Text {
-                        text: "🔍"
-                        font.pixelSize: 11
-                        color: CachyTheme.textMuted
+                    CachyIcon {
+                        name: "search"
+                        size: 13
+                        color: CachyPalette.textMuted
                     }
 
                     QQC2.TextField {

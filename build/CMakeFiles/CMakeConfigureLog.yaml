@@ -232,7 +232,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/4.5.0/CompilerIdCXX/a.out
+        /home/cesar/Proyectos/kautomator/build/CMakeFiles/4.5.1/CompilerIdCXX/a.out
       
   -
     kind: "find-v1"
@@ -851,8 +851,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-q8ZouV"
-      binary: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-q8ZouV"
+      source: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-iecQeE"
+      binary: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-iecQeE"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -863,10 +863,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: false
       stdout: |
-        Change Dir: '/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-q8ZouV'
+        Change Dir: '/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-iecQeE'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_e80a6
-        [1/2] /usr/bin/c++   -v -o CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/ninja -v cmTC_6a21b
+        [1/2] /usr/bin/c++   -v -o CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         Target: x86_64-pc-linux-gnu
@@ -874,8 +874,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 16.2.1 20260810 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e80a6.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e80a6.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccijTC0Z.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6a21b.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_6a21b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/cc2MB9GM.s
         GNU C++20 (GCC) version 16.2.1 20260810 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 16.2.1 20260810, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.28-GMP
         
@@ -892,13 +892,13 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 48ed26afbfd8a1151cb01c1770d6f643
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e80a6.dir/'
-         as -v --64 -o CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccijTC0Z.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6a21b.dir/'
+         as -v --64 -o CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc2MB9GM.s
         GNU assembler version 2.47 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.47
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] : && /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_e80a6   && :
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_6a21b   && :
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper
@@ -909,12 +909,12 @@ events:
         gcc version 16.2.1 20260810 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e80a6' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e80a6.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWN2xkp.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e80a6 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6a21b' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6a21b.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg1FVn7.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_6a21b /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
         collect2 version 16.2.1 20260810
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWN2xkp.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e80a6 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg1FVn7.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_6a21b /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.47
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e80a6' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e80a6.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6a21b' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6a21b.'
         
       exitCode: 0
   -
@@ -951,12 +951,12 @@ events:
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)(\\.exe)?"?( |$)]
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
-        ignore line: [Change Dir: '/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-q8ZouV']
+        ignore line: [Change Dir: '/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-iecQeE']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_e80a6]
-        ignore line: [[1/2] /usr/bin/c++   -v -o CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_6a21b]
+        ignore line: [[1/2] /usr/bin/c++   -v -o CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -964,8 +964,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 16.2.1 20260810 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e80a6.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e80a6.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccijTC0Z.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6a21b.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_6a21b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/cc2MB9GM.s]
         ignore line: [GNU C++20 (GCC) version 16.2.1 20260810 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 16.2.1 20260810  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.28-GMP]
         ignore line: []
@@ -982,13 +982,13 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 48ed26afbfd8a1151cb01c1770d6f643]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e80a6.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccijTC0Z.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6a21b.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc2MB9GM.s]
         ignore line: [GNU assembler version 2.47 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.47]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] : && /usr/bin/c++  -v -Wl -v CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_e80a6   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /usr/bin/c++  -v -Wl -v CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_6a21b   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper]
@@ -999,13 +999,13 @@ events:
         ignore line: [gcc version 16.2.1 20260810 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e80a6' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e80a6.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWN2xkp.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e80a6 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6a21b' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6a21b.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg1FVn7.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_6a21b /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2] ==> ignore
           arg [-plugin] ==> ignore, skip following value
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so] ==> skip value of -plugin
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccWN2xkp.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccg1FVn7.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
@@ -1021,7 +1021,7 @@ events:
           arg [/lib64/ld-linux-x86-64.so.2] ==> skip value of -dynamic-linker
           arg [-pie] ==> ignore
           arg [-o] ==> ignore, skip following value
-          arg [cmTC_e80a6] ==> skip value of -o
+          arg [cmTC_6a21b] ==> skip value of -o
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o]
@@ -1033,7 +1033,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1045,9 +1045,9 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
         ignore line: [collect2 version 16.2.1 20260810]
-        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWN2xkp.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e80a6 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker [/usr/bin/ld]
-        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWN2xkp.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e80a6 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker architecture flags [-m;elf_x86_64]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWN2xkp.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e80a6 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_e80a6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
+        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg1FVn7.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_6a21b /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker [/usr/bin/ld]
+        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg1FVn7.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_6a21b /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker architecture flags [-m;elf_x86_64]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg1FVn7.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_6a21b /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_6a21b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
         linker tool for 'CXX': /usr/bin/ld -m;elf_x86_64
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
@@ -1119,27 +1119,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/ECMConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/ECMConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/ecm-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/ecm-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/ECM.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/ECM.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/ecm.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/ecm.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/ECM.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/ECM.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/ecm.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/ecm.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -1273,7 +1273,7 @@ events:
     found:
       path: "/usr/share/ECM/cmake/ECMConfig.cmake"
       mode: "config"
-      version: "6.31.0"
+      version: "6.32.0"
     search_context:
       ENV{PATH}:
         - "/home/cesar/.gemini/antigravity/bin"
@@ -1313,8 +1313,8 @@ events:
       - "/usr/share/ECM/kde-modules/KDEInstallDirs.cmake:17 (include)"
       - "CMakeLists.txt:15 (include)"
     directories:
-      source: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-Jfzu02"
-      binary: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-Jfzu02"
+      source: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-bx7ahw"
+      binary: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-bx7ahw"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1325,11 +1325,11 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-Jfzu02'
+        Change Dir: '/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-bx7ahw'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_1c47c
-        [1/2] /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++20 -o CMakeFiles/cmTC_1c47c.dir/src.cxx.o -c /run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-Jfzu02/src.cxx
-        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_1c47c.dir/src.cxx.o -o cmTC_1c47c   && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_bfc03
+        [1/2] /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++20 -o CMakeFiles/cmTC_bfc03.dir/src.cxx.o -c /home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-bx7ahw/src.cxx
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_bfc03.dir/src.cxx.o -o cmTC_bfc03   && :
         
       exitCode: 0
   -
@@ -1380,27 +1380,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6CoreToolsConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6CoreToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6coretools-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6coretools-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6CoreTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6CoreTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6coretools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6coretools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6CoreTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6CoreTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6coretools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6coretools.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -1487,27 +1487,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6Config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6Config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -1581,6 +1581,14 @@ events:
       -
         path: "/home/cesar/.local/share/cps/qt6.cps"
         mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/cesar/.local/lib/qt6/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/cesar/.local/lib/qt6/qt6-config.cmake"
+        mode: "config"
         reason: "no_exist"
       -
         path: "/usr/local/Qt6Config.cmake"
@@ -3287,6 +3295,22 @@ events:
         mode: "config"
         reason: "no_exist"
       -
+        path: "/usr/lib/cmake/Qt6NetworkAuthPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cmake/Qt6NetworkAuthPrivate/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cmake/Qt6NetworkAuth/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cmake/Qt6NetworkAuth/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
         path: "/usr/lib/cmake/Qt6Network/Qt6Config.cmake"
         mode: "config"
         reason: "no_exist"
@@ -3628,6 +3652,14 @@ events:
         reason: "no_exist"
       -
         path: "/usr/lib/cmake/Qt6Gui/qt6-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cmake/Qt6GstreamerMediaPluginImplPrivate/Qt6Config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cmake/Qt6GstreamerMediaPluginImplPrivate/qt6-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
@@ -6670,8 +6702,8 @@ events:
     checks:
       - "Looking for __GLIBC__"
     directories:
-      source: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-YmQk1l"
-      binary: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-YmQk1l"
+      source: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-IgLoM4"
+      binary: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-IgLoM4"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -6683,11 +6715,11 @@ events:
       variable: "LIBC_IS_GLIBC"
       cached: true
       stdout: |
-        Change Dir: '/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-YmQk1l'
+        Change Dir: '/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-IgLoM4'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_487a5
-        [1/2] /usr/bin/c++   -std=gnu++20 -o CMakeFiles/cmTC_487a5.dir/CheckSymbolExists.cxx.o -c /run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-YmQk1l/CheckSymbolExists.cxx
-        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_487a5.dir/CheckSymbolExists.cxx.o -o cmTC_487a5   && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_34e7c
+        [1/2] /usr/bin/c++   -std=gnu++20 -o CMakeFiles/cmTC_34e7c.dir/CheckSymbolExists.cxx.o -c /home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-IgLoM4/CheckSymbolExists.cxx
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_34e7c.dir/CheckSymbolExists.cxx.o -o cmTC_34e7c   && :
         
       exitCode: 0
   -
@@ -6700,8 +6732,8 @@ events:
     checks:
       - "Performing Test _OFFT_IS_64BIT"
     directories:
-      source: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-rQBGmg"
-      binary: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-rQBGmg"
+      source: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-VKk7ec"
+      binary: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-VKk7ec"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -6713,11 +6745,11 @@ events:
       variable: "_OFFT_IS_64BIT"
       cached: true
       stdout: |
-        Change Dir: '/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-rQBGmg'
+        Change Dir: '/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-VKk7ec'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_02079
-        [1/2] /usr/bin/c++ -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -D_OFFT_IS_64BIT  -std=gnu++20 -o CMakeFiles/cmTC_02079.dir/src.cxx.o -c /run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-rQBGmg/src.cxx
-        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_02079.dir/src.cxx.o -o cmTC_02079   && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_d73ab
+        [1/2] /usr/bin/c++ -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -D_OFFT_IS_64BIT  -std=gnu++20 -o CMakeFiles/cmTC_d73ab.dir/src.cxx.o -c /home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-VKk7ec/src.cxx
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_d73ab.dir/src.cxx.o -o cmTC_d73ab   && :
         
       exitCode: 0
   -
@@ -6731,8 +6763,8 @@ events:
     checks:
       - "Performing Test HAVE_DATE_TIME"
     directories:
-      source: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-2PoZuD"
-      binary: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-2PoZuD"
+      source: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-HNcLXJ"
+      binary: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-HNcLXJ"
     cmakeVariables:
       CMAKE_CXX_FLAGS: " -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Werror=init-self -Werror=undef -Wvla"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -6744,11 +6776,11 @@ events:
       variable: "HAVE_DATE_TIME"
       cached: true
       stdout: |
-        Change Dir: '/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-2PoZuD'
+        Change Dir: '/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-HNcLXJ'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_f88c9
-        [1/2] /usr/bin/c++ -DHAVE_DATE_TIME  -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Werror=init-self -Werror=undef -Wvla  -std=gnu++20   -Wdate-time -o CMakeFiles/cmTC_f88c9.dir/src.cxx.o -c /run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-2PoZuD/src.cxx
-        [2/2] : && /usr/bin/c++ -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Werror=init-self -Werror=undef -Wvla -Wl,--enable-new-dtags CMakeFiles/cmTC_f88c9.dir/src.cxx.o -o cmTC_f88c9   && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_c1953
+        [1/2] /usr/bin/c++ -DHAVE_DATE_TIME  -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Werror=init-self -Werror=undef -Wvla  -std=gnu++20   -Wdate-time -o CMakeFiles/cmTC_c1953.dir/src.cxx.o -c /home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-HNcLXJ/src.cxx
+        [2/2] : && /usr/bin/c++ -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Werror=init-self -Werror=undef -Wvla -Wl,--enable-new-dtags CMakeFiles/cmTC_c1953.dir/src.cxx.o -o cmTC_c1953   && :
         
       exitCode: 0
   -
@@ -6767,8 +6799,8 @@ events:
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-YHOKW5"
-      binary: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-YHOKW5"
+      source: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-iI73JJ"
+      binary: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-iI73JJ"
     cmakeVariables:
       CMAKE_CXX_FLAGS: " -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Werror=init-self -Werror=undef -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -pedantic -Wzero-as-null-pointer-constant -Wmissing-include-dirs -fdiagnostics-color=always"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -6780,11 +6812,11 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: '/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-YHOKW5'
+        Change Dir: '/home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-iI73JJ'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_3b0af
-        [1/2] /usr/bin/c++ -DHAVE_STDATOMIC -D_GNU_SOURCE -D_LARGEFILE64_SOURCE  -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Werror=init-self -Werror=undef -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -pedantic -Wzero-as-null-pointer-constant -Wmissing-include-dirs -fdiagnostics-color=always  -std=gnu++20 -o CMakeFiles/cmTC_3b0af.dir/src.cxx.o -c /run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-YHOKW5/src.cxx
-        [2/2] : && /usr/bin/c++ -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Werror=init-self -Werror=undef -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -pedantic -Wzero-as-null-pointer-constant -Wmissing-include-dirs -fdiagnostics-color=always -Wl,--enable-new-dtags CMakeFiles/cmTC_3b0af.dir/src.cxx.o -o cmTC_3b0af   && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_ea5f5
+        [1/2] /usr/bin/c++ -DHAVE_STDATOMIC -D_GNU_SOURCE -D_LARGEFILE64_SOURCE  -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Werror=init-self -Werror=undef -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -pedantic -Wzero-as-null-pointer-constant -Wmissing-include-dirs -fdiagnostics-color=always  -std=gnu++20 -o CMakeFiles/cmTC_ea5f5.dir/src.cxx.o -c /home/cesar/Proyectos/kautomator/build/CMakeFiles/CMakeScratch/TryCompile-iI73JJ/src.cxx
+        [2/2] : && /usr/bin/c++ -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type -Werror=init-self -Werror=undef -Wvla -Wdate-time -Wsuggest-override -Wlogical-op -pedantic -Wzero-as-null-pointer-constant -Wmissing-include-dirs -fdiagnostics-color=always -Wl,--enable-new-dtags CMakeFiles/cmTC_ea5f5.dir/src.cxx.o -o cmTC_ea5f5   && :
         
       exitCode: 0
   -
@@ -6834,27 +6866,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6CoreConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6CoreConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6core-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6core-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Core.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Core.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6core.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6core.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6Core.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6Core.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6core.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6core.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -8544,27 +8576,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6GuiToolsConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6GuiToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6guitools-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6guitools-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6GuiTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6GuiTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6guitools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6guitools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6GuiTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6GuiTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6guitools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6guitools.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -8769,27 +8801,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6DBusToolsConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6DBusToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6dbustools-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6dbustools-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6DBusTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6DBusTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6dbustools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6dbustools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6DBusTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6DBusTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6dbustools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6dbustools.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -8991,27 +9023,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6DBusConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6DBusConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6dbus-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6dbus-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6DBus.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6DBus.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6dbus.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6dbus.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6DBus.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6DBus.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6dbus.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6dbus.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -9111,27 +9143,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6GuiConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6GuiConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6gui-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6gui-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Gui.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Gui.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6gui.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6gui.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6Gui.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6Gui.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6gui.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6gui.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -9235,27 +9267,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6WidgetsToolsConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6WidgetsToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6widgetstools-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6widgetstools-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6WidgetsTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6WidgetsTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6widgetstools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6widgetstools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6WidgetsTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6WidgetsTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6widgetstools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6widgetstools.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -9451,27 +9483,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6WidgetsConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6WidgetsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6widgets-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6widgets-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Widgets.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Widgets.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6widgets.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6widgets.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6Widgets.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6Widgets.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6widgets.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6widgets.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -9575,27 +9607,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlToolsConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qmltools-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qmltools-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QmlTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QmlTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qmltools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qmltools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QmlTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QmlTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qmltools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qmltools.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -9797,27 +9829,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlIntegrationConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlIntegrationConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qmlintegration-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qmlintegration-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QmlIntegration.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QmlIntegration.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qmlintegration.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qmlintegration.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QmlIntegration.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QmlIntegration.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qmlintegration.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qmlintegration.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -9907,27 +9939,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6NetworkConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6NetworkConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6network-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6network-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Network.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Network.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6network.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6network.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6Network.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6Network.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6network.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6network.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -9944,6 +9976,22 @@ events:
         reason: "no_exist"
       -
         path: "/usr/lib/cmake/Qt6NetworkPrivate/qt6network-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cmake/Qt6NetworkAuthPrivate/Qt6NetworkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cmake/Qt6NetworkAuthPrivate/qt6network-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cmake/Qt6NetworkAuth/Qt6NetworkConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cmake/Qt6NetworkAuth/qt6network-config.cmake"
         mode: "config"
         reason: "no_exist"
     found:
@@ -10019,27 +10067,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlCompilerPlusPrivateToolsConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlCompilerPlusPrivateToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qmlcompilerplusprivatetools-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qmlcompilerplusprivatetools-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QmlCompilerPlusPrivateTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QmlCompilerPlusPrivateTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qmlcompilerplusprivatetools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qmlcompilerplusprivatetools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QmlCompilerPlusPrivateTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QmlCompilerPlusPrivateTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qmlcompilerplusprivatetools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qmlcompilerplusprivatetools.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -10352,27 +10400,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qml-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qml-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Qml.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Qml.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qml.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qml.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6Qml.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6Qml.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qml.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qml.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -10708,27 +10756,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QuickToolsConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QuickToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6quicktools-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6quicktools-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QuickTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QuickTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6quicktools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6quicktools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QuickTools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QuickTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6quicktools.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6quicktools.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -10930,27 +10978,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlModelsConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlModelsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qmlmodels-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qmlmodels-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QmlModels.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QmlModels.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qmlmodels.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qmlmodels.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QmlModels.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QmlModels.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qmlmodels.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qmlmodels.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -11053,27 +11101,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlWorkerScriptConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlWorkerScriptConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qmlworkerscript-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qmlworkerscript-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QmlWorkerScript.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QmlWorkerScript.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qmlworkerscript.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qmlworkerscript.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QmlWorkerScript.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QmlWorkerScript.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qmlworkerscript.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qmlworkerscript.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -11171,27 +11219,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlMetaConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QmlMetaConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qmlmeta-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6qmlmeta-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QmlMeta.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QmlMeta.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qmlmeta.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6qmlmeta.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QmlMeta.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QmlMeta.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qmlmeta.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6qmlmeta.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -11289,27 +11337,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6OpenGLConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6OpenGLConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6opengl-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6opengl-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6OpenGL.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6OpenGL.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6opengl.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6opengl.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6OpenGL.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6OpenGL.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6opengl.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6opengl.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -11409,27 +11457,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QuickConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QuickConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6quick-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6quick-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Quick.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Quick.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6quick.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6quick.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6Quick.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6Quick.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6quick.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6quick.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -12231,27 +12279,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QuickTemplates2Config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QuickTemplates2Config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6quicktemplates2-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6quicktemplates2-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QuickTemplates2.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QuickTemplates2.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6quicktemplates2.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6quicktemplates2.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QuickTemplates2.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QuickTemplates2.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6quicktemplates2.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6quicktemplates2.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -12343,27 +12391,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QuickControls2Config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/Qt6QuickControls2Config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6quickcontrols2-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/qt6quickcontrols2-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QuickControls2.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/Qt6QuickControls2.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6quickcontrols2.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/qt6quickcontrols2.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QuickControls2.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/Qt6QuickControls2.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6quickcontrols2.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/qt6quickcontrols2.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -12661,27 +12709,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/KF6CoreAddonsConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/KF6CoreAddonsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/kf6coreaddons-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/kf6coreaddons-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/KF6CoreAddons.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/KF6CoreAddons.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/kf6coreaddons.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/kf6coreaddons.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/KF6CoreAddons.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/KF6CoreAddons.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/kf6coreaddons.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/kf6coreaddons.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -12807,7 +12855,7 @@ events:
     found:
       path: "/usr/lib/cmake/KF6CoreAddons/KF6CoreAddonsConfig.cmake"
       mode: "config"
-      version: "6.31.0"
+      version: "6.32.0"
     search_context:
       ENV{PATH}:
         - "/home/cesar/.gemini/antigravity/bin"
@@ -13107,27 +13155,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/KF6I18nConfig.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/KF6I18nConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/kf6i18n-config.cmake"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/kf6i18n-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/KF6I18n.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/KF6I18n.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/kf6i18n.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/lib/cps/kf6i18n.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/KF6I18n.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/KF6I18n.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/kf6i18n.cps"
+        path: "/home/cesar/Proyectos/kautomator/build/CMakeFiles/pkgRedirects/share/cps/kf6i18n.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -13253,7 +13301,7 @@ events:
     found:
       path: "/usr/lib/cmake/KF6I18n/KF6I18nConfig.cmake"
       mode: "config"
-      version: "6.31.0"
+      version: "6.32.0"
     search_context:
       ENV{PATH}:
         - "/home/cesar/.gemini/antigravity/bin"

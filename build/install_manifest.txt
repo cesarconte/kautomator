@@ -1,1 +1,8 @@
 /usr/bin/kautomator-gui
+/usr/bin/kautomator
+/usr/share/kautomator/src/rules.py
+/usr/share/kautomator/src/actions.py
+/usr/share/kautomator/src/engine.py
+/usr/lib/systemd/user/kautomator.service
+/usr/share/kio/servicemenus/org.cesar.kautomator.desktop
+/usr/share/applications/org.cesar.kautomator.desktop

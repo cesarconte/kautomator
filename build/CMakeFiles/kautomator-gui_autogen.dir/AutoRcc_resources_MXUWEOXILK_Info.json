@@ -1,29 +1,29 @@
 {
-	"BUILD_DIR" : "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/kautomator-gui_autogen",
-	"CMAKE_BINARY_DIR" : "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/run/media/cesar/Seagate/Linux/Proyectos/kautomator",
-	"CMAKE_SOURCE_DIR" : "/run/media/cesar/Seagate/Linux/Proyectos/kautomator",
+	"BUILD_DIR" : "/home/cesar/Proyectos/kautomator/build/kautomator-gui_autogen",
+	"CMAKE_BINARY_DIR" : "/home/cesar/Proyectos/kautomator/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/cesar/Proyectos/kautomator/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/cesar/Proyectos/kautomator",
+	"CMAKE_SOURCE_DIR" : "/home/cesar/Proyectos/kautomator",
 	"CROSS_CONFIG" : false,
 	"GENERATOR" : "Ninja",
-	"INCLUDE_DIR" : "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/kautomator-gui_autogen/include",
+	"INCLUDE_DIR" : "/home/cesar/Proyectos/kautomator/build/kautomator-gui_autogen/include",
 	"INPUTS" : 
 	[
-		"/run/media/cesar/Seagate/Linux/Proyectos/kautomator/src/gui/qml/Main.qml",
-		"/run/media/cesar/Seagate/Linux/Proyectos/kautomator/src/gui/qml/AiIntelligenceCard.qml",
-		"/run/media/cesar/Seagate/Linux/Proyectos/kautomator/src/gui/qml/WorkflowCardGrid.qml",
-		"/run/media/cesar/Seagate/Linux/Proyectos/kautomator/src/gui/qml/AutomatorSidebar.qml",
-		"/run/media/cesar/Seagate/Linux/Proyectos/kautomator/src/gui/qml/WorkflowEditorInspector.qml"
+		"/home/cesar/Proyectos/kautomator/src/gui/qml/Main.qml",
+		"/home/cesar/Proyectos/kautomator/src/gui/qml/AiIntelligenceCard.qml",
+		"/home/cesar/Proyectos/kautomator/src/gui/qml/WorkflowCardGrid.qml",
+		"/home/cesar/Proyectos/kautomator/src/gui/qml/AutomatorSidebar.qml",
+		"/home/cesar/Proyectos/kautomator/src/gui/qml/WorkflowEditorInspector.qml"
 	],
-	"LOCK_FILE" : "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/kautomator-gui_autogen.dir/AutoRcc_resources_MXUWEOXILK_Lock.lock",
+	"LOCK_FILE" : "/home/cesar/Proyectos/kautomator/build/CMakeFiles/kautomator-gui_autogen.dir/AutoRcc_resources_MXUWEOXILK_Lock.lock",
 	"MULTI_CONFIG" : false,
 	"OPTIONS" : [ "-name", "resources" ],
 	"OUTPUT_CHECKSUM" : "MXUWEOXILK",
 	"OUTPUT_NAME" : "qrc_resources.cpp",
 	"RCC_EXECUTABLE" : "/usr/lib/qt6/rcc",
 	"RCC_LIST_OPTIONS" : [ "--list" ],
-	"SETTINGS_FILE" : "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/build/CMakeFiles/kautomator-gui_autogen.dir/AutoRcc_resources_MXUWEOXILK_Used.txt",
-	"SOURCE" : "/run/media/cesar/Seagate/Linux/Proyectos/kautomator/src/gui/resources.qrc",
+	"SETTINGS_FILE" : "/home/cesar/Proyectos/kautomator/build/CMakeFiles/kautomator-gui_autogen.dir/AutoRcc_resources_MXUWEOXILK_Used.txt",
+	"SOURCE" : "/home/cesar/Proyectos/kautomator/src/gui/resources.qrc",
 	"USE_BETTER_GRAPH" : true,
 	"VERBOSITY" : 0
 }
