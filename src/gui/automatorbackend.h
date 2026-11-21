@@ -21,20 +21,23 @@ class AutomatorBackend : public QObject
 
     Q_PROPERTY(QVariantList workflows READ workflows NOTIFY workflowsChanged)
     Q_PROPERTY(QVariantList filteredWorkflows READ filteredWorkflows NOTIFY filteredWorkflowsChanged)
+    Q_PROPERTY(QVariantList folders READ folders NOTIFY foldersChanged)
     Q_PROPERTY(QString currentCategory READ currentCategory WRITE setCurrentCategory NOTIFY currentCategoryChanged)
+    Q_PROPERTY(QString currentViewTitle READ currentViewTitle NOTIFY currentViewTitleChanged)
     Q_PROPERTY(QString searchQuery READ searchQuery WRITE setSearchQuery NOTIFY searchQueryChanged)
     Q_PROPERTY(QString viewMode READ viewMode WRITE setViewMode NOTIFY viewModeChanged)
     Q_PROPERTY(QString selectedWorkflowId READ selectedWorkflowId WRITE setSelectedWorkflowId NOTIFY selectedWorkflowIdChanged)
     Q_PROPERTY(QVariantMap selectedWorkflow READ selectedWorkflow NOTIFY selectedWorkflowIdChanged)
+    Q_PROPERTY(QString runningWorkflowId READ runningWorkflowId NOTIFY runningWorkflowIdChanged)
 
-    // Sidebar counts (matching 14_shortcuts.png)
+    // Sidebar counts
     Q_PROPERTY(int allShortcutsCount READ allShortcutsCount NOTIFY workflowsChanged)
     Q_PROPERTY(int shareSheetCount READ shareSheetCount NOTIFY workflowsChanged)
     Q_PROPERTY(int quickActionsCount READ quickActionsCount NOTIFY workflowsChanged)
     Q_PROPERTY(int menuBarCount READ menuBarCount NOTIFY workflowsChanged)
     Q_PROPERTY(int automationCount READ automationCount NOTIFY workflowsChanged)
 
-    // Right Pane: Apple Intelligence in Shortcuts ("Describe a change" - 14_shortcuts.png)
+    // Right Pane: Golden Gate Intelligence card ("Describe un atajo")
     Q_PROPERTY(QString aiCardHeadline READ aiCardHeadline NOTIFY aiStateChanged)
     Q_PROPERTY(QString aiCardQuote READ aiCardQuote NOTIFY aiStateChanged)
     Q_PROPERTY(QString aiCardSubtext READ aiCardSubtext NOTIFY aiStateChanged)
@@ -47,9 +50,11 @@ public:
 
     QVariantList workflows() const;
     QVariantList filteredWorkflows() const;
+    QVariantList folders() const;
 
     QString currentCategory() const;
     void setCurrentCategory(const QString &cat);
+    QString currentViewTitle() const;
 
     QString searchQuery() const;
     void setSearchQuery(const QString &q);
@@ -60,6 +65,7 @@ public:
     QString selectedWorkflowId() const;
     void setSelectedWorkflowId(const QString &id);
     QVariantMap selectedWorkflow() const;
+    QString runningWorkflowId() const { return m_runningWorkflowId; }
 
     int allShortcutsCount() const;
     int shareSheetCount() const;
@@ -81,11 +87,20 @@ public:
                                     const QString &subtitle,
                                     const QString &category,
                                     const QString &color,
-                                    const QString &command);
+                                    const QString &command,
+                                    const QString &folderId = QString(),
+                                    const QString &icon = QString());
     Q_INVOKABLE void deleteWorkflow(const QString &id);
     Q_INVOKABLE void duplicateWorkflow(const QString &id);
     Q_INVOKABLE void exportWorkflow(const QString &id);
+
+    Q_INVOKABLE void createFolder(const QString &name, const QString &icon = QStringLiteral("folder"));
+    Q_INVOKABLE void renameFolder(const QString &folderId, const QString &newName);
+    Q_INVOKABLE void deleteFolder(const QString &folderId);
+    Q_INVOKABLE void assignWorkflowToFolder(const QString &workflowId, const QString &folderId);
+
     Q_INVOKABLE void describeChange(const QString &prompt);
+    Q_INVOKABLE void resetAiPrompt();
     Q_INVOKABLE void toggleDaemon();
     Q_INVOKABLE void runAllFolderRulesNow();
     Q_INVOKABLE void openRulesFileInEditor();
@@ -94,10 +109,13 @@ public:
 Q_SIGNALS:
     void workflowsChanged();
     void filteredWorkflowsChanged();
+    void foldersChanged();
     void currentCategoryChanged();
+    void currentViewTitleChanged();
     void searchQueryChanged();
     void viewModeChanged();
     void selectedWorkflowIdChanged();
+    void runningWorkflowIdChanged();
     void aiStateChanged();
     void daemonStateChanged();
     void fileSelectionRequested(const QString &workflowId, const QString &title);
@@ -109,4 +127,5 @@ private:
     AiWorkflowAssistant *m_aiAssistant = nullptr;
 
     QString m_viewMode = QStringLiteral("grid");
+    QString m_runningWorkflowId;
 };

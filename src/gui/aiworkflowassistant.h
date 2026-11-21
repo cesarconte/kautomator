@@ -23,6 +23,7 @@ public:
     bool aiBusy() const { return m_aiBusy; }
 
     void setAiStatus(const QString &headline, const QString &quote, bool busy = false);
+    void resetPrompt();
     void describeChange(const QString &prompt);
 
 Q_SIGNALS:
@@ -30,8 +31,8 @@ Q_SIGNALS:
     void workflowGenerated(const QVariantMap &workflow);
 
 private:
-    QString m_aiCardHeadline = QStringLiteral("Shortcuts can't download and install apps from the Internet.");
-    QString m_aiCardQuote = QStringLiteral("\"Find apps in the App Store\"");
-    QString m_aiCardSubtext = QStringLiteral("Describe a change below to generate or customize a workflow with local AI.");
+    QString m_aiCardHeadline = QStringLiteral("¿Qué quieres que haga tu atajo?");
+    QString m_aiCardQuote = QStringLiteral("«Organizar mis descargas en carpetas»");
+    QString m_aiCardSubtext = QStringLiteral("Describe un atajo abajo para crearlo o personalizarlo con IA local.");
     bool m_aiBusy = false;
 };

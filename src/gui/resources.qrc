@@ -5,5 +5,23 @@
         <file alias="qml/WorkflowCardGrid.qml">qml/WorkflowCardGrid.qml</file>
         <file alias="qml/AiIntelligenceCard.qml">qml/AiIntelligenceCard.qml</file>
         <file alias="qml/WorkflowEditorInspector.qml">qml/WorkflowEditorInspector.qml</file>
+        <file alias="icons/folder-add.svg">icons/folder-add.svg</file>
+        <file alias="icons/shortcuts-stack.svg">icons/shortcuts-stack.svg</file>
+        <file alias="icons/menubar-window.svg">icons/menubar-window.svg</file>
+        <file alias="icons/glyph-layers.svg">icons/glyph-layers.svg</file>
+        <file alias="icons/glyph-globe.svg">icons/glyph-globe.svg</file>
+        <file alias="icons/glyph-laptop.svg">icons/glyph-laptop.svg</file>
+        <file alias="icons/glyph-music.svg">icons/glyph-music.svg</file>
+        <file alias="icons/glyph-document.svg">icons/glyph-document.svg</file>
+        <file alias="icons/glyph-photo.svg">icons/glyph-photo.svg</file>
+        <file alias="icons/glyph-gif.svg">icons/glyph-gif.svg</file>
+        <file alias="icons/glyph-folder.svg">icons/glyph-folder.svg</file>
+        <file alias="icons/glyph-archive.svg">icons/glyph-archive.svg</file>
+        <file alias="icons/glyph-sparkles.svg">icons/glyph-sparkles.svg</file>
+        <file alias="icons/glyph-terminal.svg">icons/glyph-terminal.svg</file>
+        <file alias="icons/glyph-camera.svg">icons/glyph-camera.svg</file>
+        <file alias="icons/glyph-share-arrow.svg">icons/glyph-share-arrow.svg</file>
+        <file alias="icons/glyph-sun.svg">icons/glyph-sun.svg</file>
+        <file alias="icons/glyph-phone.svg">icons/glyph-phone.svg</file>
     </qresource>
 </RCC>

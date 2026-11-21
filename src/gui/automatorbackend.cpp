@@ -22,24 +22,31 @@ AutomatorBackend::AutomatorBackend(QObject *parent)
     // Repository signals
     connect(m_repo, &WorkflowRepository::workflowsChanged, this, &AutomatorBackend::workflowsChanged);
     connect(m_repo, &WorkflowRepository::filteredWorkflowsChanged, this, &AutomatorBackend::filteredWorkflowsChanged);
+    connect(m_repo, &WorkflowRepository::foldersChanged, this, &AutomatorBackend::foldersChanged);
+    connect(m_repo, &WorkflowRepository::foldersChanged, this, &AutomatorBackend::currentViewTitleChanged);
     connect(m_repo, &WorkflowRepository::currentCategoryChanged, this, &AutomatorBackend::currentCategoryChanged);
+    connect(m_repo, &WorkflowRepository::currentCategoryChanged, this, &AutomatorBackend::currentViewTitleChanged);
     connect(m_repo, &WorkflowRepository::searchQueryChanged, this, &AutomatorBackend::searchQueryChanged);
     connect(m_repo, &WorkflowRepository::selectedWorkflowIdChanged, this, &AutomatorBackend::selectedWorkflowIdChanged);
 
     // Runner signals
-    connect(m_runner, &WorkflowRunner::executionStarted, this, [this](const QString &, const QString &title, const QString &cmd) {
-        m_aiAssistant->setAiStatus(QStringLiteral("Running \"%1\"…").arg(title), QStringLiteral("\"%1\"").arg(cmd), true);
+    connect(m_runner, &WorkflowRunner::executionStarted, this, [this](const QString &id, const QString &title, const QString &cmd) {
+        m_runningWorkflowId = id;
+        Q_EMIT runningWorkflowIdChanged();
+        m_aiAssistant->setAiStatus(QStringLiteral("Ejecutando «%1»…").arg(title), QStringLiteral("«%1»").arg(cmd), true);
     });
     connect(m_runner, &WorkflowRunner::executionFinished, this, [this](const QString &, const QString &title, int exitCode, const QString &out, const QString &err) {
+        m_runningWorkflowId.clear();
+        Q_EMIT runningWorkflowIdChanged();
         if (exitCode == 0) {
             m_aiAssistant->setAiStatus(
-                QStringLiteral("✓ \"%1\" completed successfully.").arg(title),
-                out.isEmpty() ? QStringLiteral("\"Workflow finished with exit code 0\"") : QStringLiteral("\"%1\"").arg(out.left(180)),
+                QStringLiteral("«%1» completado correctamente.").arg(title),
+                out.isEmpty() ? QStringLiteral("«Flujo finalizado sin errores»") : QStringLiteral("«%1»").arg(out.left(180)),
                 false);
         } else {
             m_aiAssistant->setAiStatus(
-                QStringLiteral("⚠️ \"%1\" finished with a warning.").arg(title),
-                err.isEmpty() ? QStringLiteral("\"Exit code %1\"").arg(exitCode) : QStringLiteral("\"%1\"").arg(err.left(180)),
+                QStringLiteral("«%1» finalizó con advertencias.").arg(title),
+                err.isEmpty() ? QStringLiteral("«Código de salida %1»").arg(exitCode) : QStringLiteral("«%1»").arg(err.left(180)),
                 false);
         }
     });
@@ -67,6 +74,11 @@ QVariantList AutomatorBackend::filteredWorkflows() const
     return m_repo->filteredWorkflows();
 }
 
+QVariantList AutomatorBackend::folders() const
+{
+    return m_repo->folders();
+}
+
 QString AutomatorBackend::currentCategory() const
 {
     return m_repo->currentCategory();
@@ -75,6 +87,31 @@ QString AutomatorBackend::currentCategory() const
 void AutomatorBackend::setCurrentCategory(const QString &cat)
 {
     m_repo->setCurrentCategory(cat);
+}
+
+QString AutomatorBackend::currentViewTitle() const
+{
+    const QString cat = m_repo->currentCategory();
+    if (cat == QLatin1String("gallery")) {
+        return QStringLiteral("Galería");
+    }
+    if (cat == QLatin1String("automation")) {
+        return QStringLiteral("Automatización");
+    }
+    if (cat == QLatin1String("share_sheet")) {
+        return QStringLiteral("Hoja para compartir");
+    }
+    if (cat == QLatin1String("quick_actions")) {
+        return QStringLiteral("Acciones rápidas");
+    }
+    if (cat == QLatin1String("menu_bar")) {
+        return QStringLiteral("Barra de menús");
+    }
+    if (cat.startsWith(QLatin1String("folder:"))) {
+        const QString name = m_repo->folderName(cat.mid(7));
+        return name.isEmpty() ? QStringLiteral("Carpeta") : name;
+    }
+    return QStringLiteral("Todos los atajos");
 }
 
 QString AutomatorBackend::searchQuery() const
@@ -181,9 +218,11 @@ void AutomatorBackend::updateWorkflow(const QString &id,
                                       const QString &subtitle,
                                       const QString &category,
                                       const QString &color,
-                                      const QString &command)
+                                      const QString &command,
+                                      const QString &folderId,
+                                      const QString &icon)
 {
-    m_repo->updateWorkflow(id, title, subtitle, category, color, command);
+    m_repo->updateWorkflow(id, title, subtitle, category, color, command, folderId, icon);
 }
 
 void AutomatorBackend::deleteWorkflow(const QString &id)
@@ -205,15 +244,40 @@ void AutomatorBackend::exportWorkflow(const QString &id)
         }
         const QVariantMap wf = m_repo->findWorkflow(id);
         m_aiAssistant->setAiStatus(
-            QStringLiteral("Workflow \"%1\" copied to clipboard.").arg(wf.value(QStringLiteral("title")).toString()),
-            QStringLiteral("\"Ready to share or paste as JSON\""),
+            QStringLiteral("Atajo «%1» copiado al portapapeles.").arg(wf.value(QStringLiteral("title")).toString()),
+            QStringLiteral("«Listo para compartir o pegar en formato JSON»"),
             false);
     }
+}
+
+void AutomatorBackend::createFolder(const QString &name, const QString &icon)
+{
+    m_repo->createFolder(name, icon);
+}
+
+void AutomatorBackend::renameFolder(const QString &folderId, const QString &newName)
+{
+    m_repo->renameFolder(folderId, newName);
+}
+
+void AutomatorBackend::deleteFolder(const QString &folderId)
+{
+    m_repo->deleteFolder(folderId);
+}
+
+void AutomatorBackend::assignWorkflowToFolder(const QString &workflowId, const QString &folderId)
+{
+    m_repo->assignWorkflowToFolder(workflowId, folderId);
 }
 
 void AutomatorBackend::describeChange(const QString &prompt)
 {
     m_aiAssistant->describeChange(prompt);
+}
+
+void AutomatorBackend::resetAiPrompt()
+{
+    m_aiAssistant->resetPrompt();
 }
 
 void AutomatorBackend::toggleDaemon()

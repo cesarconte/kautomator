@@ -20,6 +20,8 @@ public:
 
     QVariantList workflows() const { return m_workflows; }
     QVariantList filteredWorkflows() const;
+    QVariantList folders() const;
+    QString folderName(const QString &folderId) const;
 
     QString currentCategory() const { return m_currentCategory; }
     void setCurrentCategory(const QString &cat);
@@ -43,28 +45,42 @@ public:
                         const QString &subtitle,
                         const QString &category,
                         const QString &color,
-                        const QString &command);
+                        const QString &command,
+                        const QString &folderId = QString(),
+                        const QString &icon = QString());
     void deleteWorkflow(const QString &id);
     void duplicateWorkflow(const QString &id);
     QString exportWorkflow(const QString &id);
     void addWorkflow(const QVariantMap &wf);
 
+    void createFolder(const QString &name, const QString &icon = QStringLiteral("folder"));
+    void renameFolder(const QString &folderId, const QString &newName);
+    void deleteFolder(const QString &folderId);
+    void assignWorkflowToFolder(const QString &workflowId, const QString &folderId);
+
     bool workflowNeedsFile(const QString &id) const;
     QVariantMap findWorkflow(const QString &id) const;
 
     static QVariantList defaultGoldenGateWorkflows();
+    static QVariantList defaultFolders();
+    void loadFolders();
+    void saveFolders();
     void loadWorkflows();
     void saveWorkflows();
 
 Q_SIGNALS:
     void workflowsChanged();
     void filteredWorkflowsChanged();
+    void foldersChanged();
     void currentCategoryChanged();
     void searchQueryChanged();
     void selectedWorkflowIdChanged();
 
 private:
+    bool migrateToGoldenGateVisuals();
+
     QVariantList m_workflows;
+    QVariantList m_folders;
     QString m_currentCategory = QStringLiteral("all");
     QString m_searchQuery;
     QString m_selectedWorkflowId = QStringLiteral("wf_new_1");

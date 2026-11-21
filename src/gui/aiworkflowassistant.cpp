@@ -20,6 +20,15 @@ void AiWorkflowAssistant::setAiStatus(const QString &headline, const QString &qu
     Q_EMIT aiStateChanged();
 }
 
+void AiWorkflowAssistant::resetPrompt()
+{
+    m_aiCardHeadline = QStringLiteral("¿Qué quieres que haga tu atajo?");
+    m_aiCardQuote = QStringLiteral("«Organizar mis descargas en carpetas»");
+    m_aiCardSubtext = QStringLiteral("Describe un atajo abajo para crearlo o personalizarlo con IA local.");
+    m_aiBusy = false;
+    Q_EMIT aiStateChanged();
+}
+
 void AiWorkflowAssistant::describeChange(const QString &prompt)
 {
     const QString trimmed = prompt.trimmed();
@@ -28,12 +37,11 @@ void AiWorkflowAssistant::describeChange(const QString &prompt)
     }
 
     const QString lower = trimmed.toLower();
-    // Match the exact Ars Technica screenshot 14_shortcuts.png behavior when asked to download/install apps from the Store/Internet
     if (lower.contains(QLatin1String("app store"))
         || (lower.contains(QLatin1String("download")) && lower.contains(QLatin1String("app")))
         || (lower.contains(QLatin1String("descargar")) && lower.contains(QLatin1String("app")))) {
-        m_aiCardHeadline = QStringLiteral("Shortcuts can't download and install apps from the Internet.");
-        m_aiCardQuote = QStringLiteral("\"%1\"").arg(trimmed);
+        m_aiCardHeadline = QStringLiteral("Atajos no puede descargar ni instalar aplicaciones desde Internet.");
+        m_aiCardQuote = QStringLiteral("«%1»").arg(trimmed);
         m_aiBusy = false;
         Q_EMIT aiStateChanged();
         return;
@@ -41,52 +49,53 @@ void AiWorkflowAssistant::describeChange(const QString &prompt)
 
     // Build a real workflow from the natural-language description
     QString cmd = QStringLiteral("kautomator run ~/Descargas");
-    QString color = QStringLiteral("#0091FF");
-    QString glyph = QStringLiteral("✦");
+    QString color = QStringLiteral("#468DF2");
+    QString icon = QStringLiteral("glyph-sparkles");
     bool needsFile = false;
 
     if (lower.contains(QLatin1String("mp3")) || lower.contains(QLatin1String("audio"))) {
         cmd = QStringLiteral("ffmpeg -y -i {file} -vn -acodec libmp3lame -q:a 2 {noext}.mp3");
-        color = QStringLiteral("#0084FF");
-        glyph = QStringLiteral("🎵");
+        color = QStringLiteral("#5465E3");
+        icon = QStringLiteral("glyph-music");
         needsFile = true;
     } else if (lower.contains(QLatin1String("pdf"))) {
         cmd = QStringLiteral("magick {file} {noext}.pdf");
-        color = QStringLiteral("#FF4D62");
-        glyph = QStringLiteral("📄");
+        color = QStringLiteral("#468DF2");
+        icon = QStringLiteral("glyph-document");
         needsFile = true;
     } else if (lower.contains(QLatin1String("gif"))) {
         cmd = QStringLiteral("ffmpeg -y -i {file} -vf fps=12,scale=640:-1:flags=lanczos {noext}.gif");
-        color = QStringLiteral("#FF64B4");
-        glyph = QStringLiteral("🎞");
+        color = QStringLiteral("#E676C4");
+        icon = QStringLiteral("glyph-gif");
         needsFile = true;
-    } else if (lower.contains(QLatin1String("resize")) || lower.contains(QLatin1String("redimensionar")) || lower.contains(QLatin1String("px"))) {
+    } else if (lower.contains(QLatin1String("resize")) || lower.contains(QLatin1String("redimensionar"))
+               || lower.contains(QLatin1String("imagen")) || lower.contains(QLatin1String("px"))) {
         cmd = QStringLiteral("magick {file} -resize 1600x {noext}_resized.jpg");
-        color = QStringLiteral("#28CD56");
-        glyph = QStringLiteral("🖼");
+        color = QStringLiteral("#38C962");
+        icon = QStringLiteral("glyph-photo");
         needsFile = true;
     } else if (lower.contains(QLatin1String("nas")) || lower.contains(QLatin1String("smb")) || lower.contains(QLatin1String("red"))) {
         cmd = QStringLiteral("xdg-open smb://");
-        color = QStringLiteral("#B65CE6");
-        glyph = QStringLiteral("🌐");
+        color = QStringLiteral("#F07C5B");
+        icon = QStringLiteral("glyph-globe");
     }
 
     const QString newId = QStringLiteral("wf_") + QUuid::createUuid().toString(QUuid::WithoutBraces).left(8);
     QVariantMap wf{
         {QStringLiteral("id"), newId},
         {QStringLiteral("title"), trimmed.left(34)},
-        {QStringLiteral("subtitle"), QStringLiteral("Generado con IA Local (%1)").arg(cmd)},
-        {QStringLiteral("icon"), QStringLiteral("layers")},
-        {QStringLiteral("glyph"), glyph},
+        {QStringLiteral("subtitle"), QStringLiteral("Generado con IA local (%1)").arg(cmd)},
+        {QStringLiteral("icon"), icon},
         {QStringLiteral("color"), color},
         {QStringLiteral("category"), QStringLiteral("quick_actions")},
         {QStringLiteral("isAutomation"), false},
         {QStringLiteral("needsFile"), needsFile},
+        {QStringLiteral("goldenGateVersion"), 2},
         {QStringLiteral("command"), cmd}
     };
 
-    m_aiCardHeadline = QStringLiteral("Created shortcut \"%1\".").arg(trimmed.left(34));
-    m_aiCardQuote = QStringLiteral("\"%1\"").arg(trimmed);
+    m_aiCardHeadline = QStringLiteral("Atajo «%1» creado.").arg(trimmed.left(34));
+    m_aiCardQuote = QStringLiteral("«%1»").arg(trimmed);
     m_aiBusy = false;
 
     Q_EMIT aiStateChanged();

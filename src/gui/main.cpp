@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     app.setApplicationName(QStringLiteral("kautomator"));
-    app.setApplicationDisplayName(QStringLiteral("KAutomator — Shortcuts"));
+    app.setApplicationDisplayName(QStringLiteral("KAutomator — Atajos"));
     app.setOrganizationName(QStringLiteral("Cesar"));
     app.setOrganizationDomain(QStringLiteral("cesar.org"));
     app.setDesktopFileName(QStringLiteral("org.cesar.kautomator"));
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
     if (parser.isSet(screenshotOpt)) {
         if (auto *win = qobject_cast<QQuickWindow *>(engine.rootObjects().constFirst())) {
             const QString outPath = parser.value(screenshotOpt);
-            QTimer::singleShot(350, win, [win, outPath, &app]() {
+            QTimer::singleShot(450, win, [win, outPath, &app]() {
                 const QImage img = win->grabWindow();
                 img.save(outPath);
                 app.quit();
