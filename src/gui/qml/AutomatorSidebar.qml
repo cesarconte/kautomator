@@ -37,7 +37,8 @@ Flickable {
             Layout.fillWidth: true
             text: qsTr("Galería")
             iconName: "grid"
-            iconColor: selected ? CachyPalette.text : CachyPalette.textSecondary
+            accentSelected: true
+            iconColor: selected ? "#FFFFFF" : CachyPalette.textSecondary
             selected: root.backend !== null && root.backend.currentCategory === "gallery"
             onClicked: if (root.backend) root.backend.currentCategory = "gallery"
         }
@@ -47,7 +48,8 @@ Flickable {
             Layout.fillWidth: true
             text: qsTr("Automatización")
             iconName: "alarm"
-            iconColor: selected ? CachyPalette.text : CachyPalette.textSecondary
+            accentSelected: true
+            iconColor: selected ? "#FFFFFF" : CachyPalette.textSecondary
             selected: root.backend !== null && root.backend.currentCategory === "automation"
             onClicked: if (root.backend) root.backend.currentCategory = "automation"
 
@@ -102,7 +104,8 @@ Flickable {
             Layout.fillWidth: true
             text: qsTr("Todos los atajos")
             iconName: "qrc:/icons/shortcuts-stack.svg"
-            iconColor: selected ? CachyPalette.text : CachyPalette.textSecondary
+            accentSelected: true
+            iconColor: selected ? "#FFFFFF" : CachyPalette.textSecondary
             badgeText: (root.backend && root.backend.allShortcutsCount > 0)
                 ? root.backend.allShortcutsCount.toString() : ""
             selected: root.backend !== null && root.backend.currentCategory === "all"
@@ -113,7 +116,8 @@ Flickable {
             Layout.fillWidth: true
             text: qsTr("Hoja para compartir")
             iconName: "share"
-            iconColor: selected ? CachyPalette.text : CachyPalette.textSecondary
+            accentSelected: true
+            iconColor: selected ? "#FFFFFF" : CachyPalette.textSecondary
             badgeText: (root.backend && root.backend.shareSheetCount > 0)
                 ? root.backend.shareSheetCount.toString() : ""
             selected: root.backend !== null && root.backend.currentCategory === "share_sheet"
@@ -124,7 +128,8 @@ Flickable {
             Layout.fillWidth: true
             text: qsTr("Acciones rápidas")
             iconName: "settings"
-            iconColor: selected ? CachyPalette.text : CachyPalette.textSecondary
+            accentSelected: true
+            iconColor: selected ? "#FFFFFF" : CachyPalette.textSecondary
             badgeText: (root.backend && root.backend.quickActionsCount > 0)
                 ? root.backend.quickActionsCount.toString() : ""
             selected: root.backend !== null && root.backend.currentCategory === "quick_actions"
@@ -135,7 +140,8 @@ Flickable {
             Layout.fillWidth: true
             text: qsTr("Barra de menús")
             iconName: "qrc:/icons/menubar-window.svg"
-            iconColor: selected ? CachyPalette.text : CachyPalette.textSecondary
+            accentSelected: true
+            iconColor: selected ? "#FFFFFF" : CachyPalette.textSecondary
             badgeText: (root.backend && root.backend.menuBarCount > 0)
                 ? root.backend.menuBarCount.toString() : ""
             selected: root.backend !== null && root.backend.currentCategory === "menu_bar"
@@ -166,7 +172,8 @@ Flickable {
                 Layout.fillWidth: true
                 text: folderItem.modelData.name || qsTr("Carpeta")
                 iconName: folderItem.modelData.icon || "folder"
-                iconColor: selected ? CachyPalette.text : CachyPalette.textSecondary
+                accentSelected: true
+                iconColor: selected ? "#FFFFFF" : CachyPalette.textSecondary
                 badgeText: (folderItem.modelData.count > 0)
                     ? folderItem.modelData.count.toString() : ""
                 selected: root.backend !== null

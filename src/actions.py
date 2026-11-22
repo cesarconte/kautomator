@@ -81,9 +81,9 @@ def execute_unpack(src_path: Path, clean_original: bool = True) -> bool:
         return res.returncode == 0
     except FileNotFoundError:
         # Respaldo si kunpack no estuviera en PATH
-        kunpack_local = Path.home() / ".local/bin/kunpack"
-        if kunpack_local.is_file():
-            res = subprocess.run([str(kunpack_local), "-q", str(src_path)], capture_output=True)
+        kunpack_path = Path("/usr/bin/kunpack")
+        if kunpack_path.is_file():
+            res = subprocess.run([str(kunpack_path), "-q", str(src_path)], capture_output=True)
             return res.returncode == 0
         return False
 

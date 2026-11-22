@@ -22,7 +22,7 @@ CachyWindow {
 
     showTrafficLights: true
     showTitle: false
-    showTitleBarDivider: true
+    showTitleBarDivider: false
     showWindowFrame: true
     sidebarVisible: true
     sidebarWidthExpanded: 224
@@ -179,7 +179,7 @@ CachyWindow {
     ]
 
     // =========================================================================
-    // 3. HEADER TOOLBAR (Aligned across middle + right panes with continuous 1px divider)
+    // 2. HEADER LEADING (Toggle Sidebar + Title + Grid/List Capsule)
     // =========================================================================
     headerLeading: [
         RowLayout {
@@ -228,95 +228,32 @@ CachyWindow {
                 color: CachyPalette.text
                 elide: Text.ElideRight
             }
-        }
-    ]
 
-    headerCenter: [
-        // Grid / List segmented pill anchored 12px left of the continuous vertical divider
-        Rectangle {
-            id: viewModePill
-            anchors.right: parent.right
-            anchors.rightMargin: 12
-            anchors.verticalCenter: parent.verticalCenter
-            width: 66
-            height: 28
-            radius: 14
-            color: CachyPalette.surfacePill
-            border.width: 1
-            border.color: CachyPalette.specularBorder
-
-            // Animated inner selection pill
-            Rectangle {
-                y: 3
-                width: 30
-                height: parent.height - 6
-                x: (root.backend && root.backend.viewMode === "list") ? (parent.width - width - 3) : 3
-                radius: 11
-                color: CachyPalette.isDark ? Qt.rgba(1, 1, 1, 0.18) : Qt.rgba(0, 0, 0, 0.09)
-
-                Behavior on x {
-                    NumberAnimation { duration: CachyTheme.animFast; easing.type: Easing.OutCubic }
-                }
-            }
-
-            Row {
-                anchors.fill: parent
-                anchors.margins: 3
-                spacing: 0
-
-                Item {
-                    width: 30
-                    height: parent.height
-
-                    CachyIcon {
-                        anchors.centerIn: parent
-                        name: "grid"
-                        size: 13
-                        color: (!root.backend || root.backend.viewMode === "grid")
-                            ? CachyPalette.text
-                            : CachyPalette.textSecondary
-                    }
-
-                    HoverHandler {
-                        id: gridHover
-                        cursorShape: Qt.PointingHandCursor
-                    }
-                    TapHandler {
-                        onTapped: if (root.backend) root.backend.viewMode = "grid"
-                    }
-                    QQC2.ToolTip.visible: gridHover.hovered
-                    QQC2.ToolTip.text: qsTr("Vista en cuadrícula (Ctrl+1)")
-                    QQC2.ToolTip.delay: 450
+            CachyToolbarGroup {
+                CachyToolbarButton {
+                    iconName: "grid"
+                    pillStyle: false
+                    checkable: true
+                    checked: !root.backend || root.backend.viewMode === "grid"
+                    tooltipText: qsTr("Vista en cuadrícula (Ctrl+1)")
+                    onClicked: if (root.backend) root.backend.viewMode = "grid"
                 }
 
-                Item {
-                    width: 30
-                    height: parent.height
-
-                    CachyIcon {
-                        anchors.centerIn: parent
-                        name: "list"
-                        size: 13
-                        color: (root.backend && root.backend.viewMode === "list")
-                            ? CachyPalette.text
-                            : CachyPalette.textSecondary
-                    }
-
-                    HoverHandler {
-                        id: listHover
-                        cursorShape: Qt.PointingHandCursor
-                    }
-                    TapHandler {
-                        onTapped: if (root.backend) root.backend.viewMode = "list"
-                    }
-                    QQC2.ToolTip.visible: listHover.hovered
-                    QQC2.ToolTip.text: qsTr("Vista en lista (Ctrl+2)")
-                    QQC2.ToolTip.delay: 450
+                CachyToolbarButton {
+                    iconName: "list"
+                    pillStyle: false
+                    checkable: true
+                    checked: root.backend && root.backend.viewMode === "list"
+                    tooltipText: qsTr("Vista en lista (Ctrl+2)")
+                    onClicked: if (root.backend) root.backend.viewMode = "list"
                 }
             }
         }
     ]
 
+    // =========================================================================
+    // 3. HEADER ACTIONS (Add Shortcut + Share + Edit Inspector + Search Capsule)
+    // =========================================================================
     headerActions: [
         Item {
             width: Math.max(260, root.rightPaneWidth + 1 - root.contentMargin)
@@ -336,195 +273,47 @@ CachyWindow {
                 anchors.fill: parent
                 anchors.leftMargin: 13
                 anchors.rightMargin: 0
-                spacing: 7
+                spacing: 8
 
-                // Add Shortcut (+) Circular Glass Button
-                Rectangle {
-                    Layout.preferredWidth: 28
-                    Layout.preferredHeight: 28
-                    radius: 14
-                    color: addTap.pressed
-                        ? CachyPalette.pressedOverlay
-                        : (addHover.hovered ? CachyPalette.cardBackgroundHover : CachyPalette.surfacePill)
-                    border.width: 1
-                    border.color: CachyPalette.specularBorder
-
-                    Behavior on color { ColorAnimation { duration: CachyTheme.animFast } }
-
-                    CachyIcon {
-                        anchors.centerIn: parent
-                        name: "add"
-                        size: 14
-                        color: CachyPalette.text
+                // Toolbar Actions Capsule Group (New Shortcut + Share)
+                CachyToolbarGroup {
+                    CachyToolbarButton {
+                        iconName: "add"
+                        pillStyle: false
+                        tooltipText: qsTr("Nuevo atajo (Ctrl+N)")
+                        onClicked: if (root.backend) root.backend.createNewWorkflow()
                     }
 
-                    HoverHandler {
-                        id: addHover
-                        cursorShape: Qt.PointingHandCursor
-                    }
-                    TapHandler {
-                        id: addTap
-                        onTapped: if (root.backend) root.backend.createNewWorkflow()
-                    }
-                    QQC2.ToolTip.visible: addHover.hovered
-                    QQC2.ToolTip.text: qsTr("Nuevo atajo (Ctrl+N)")
-                    QQC2.ToolTip.delay: 450
-                }
-
-                // Share / Export JSON Circular Glass Button
-                Rectangle {
-                    Layout.preferredWidth: 28
-                    Layout.preferredHeight: 28
-                    radius: 14
-                    color: shareTap.pressed
-                        ? CachyPalette.pressedOverlay
-                        : (shareHover.hovered ? CachyPalette.cardBackgroundHover : CachyPalette.surfacePill)
-                    border.width: 1
-                    border.color: CachyPalette.specularBorder
-
-                    Behavior on color { ColorAnimation { duration: CachyTheme.animFast } }
-
-                    CachyIcon {
-                        anchors.centerIn: parent
-                        name: "share"
-                        size: 14
-                        color: CachyPalette.text
-                    }
-
-                    HoverHandler {
-                        id: shareHover
-                        cursorShape: Qt.PointingHandCursor
-                    }
-                    TapHandler {
-                        id: shareTap
-                        onTapped: {
+                    CachyToolbarButton {
+                        iconName: "share"
+                        pillStyle: false
+                        tooltipText: qsTr("Exportar atajo al portapapeles (JSON)")
+                        onClicked: {
                             if (root.backend && root.backend.selectedWorkflowId) {
                                 root.backend.exportWorkflow(root.backend.selectedWorkflowId);
                                 statusToast.show(qsTr("Atajo copiado al portapapeles"), "success", 2200);
                             }
                         }
                     }
-                    QQC2.ToolTip.visible: shareHover.hovered
-                    QQC2.ToolTip.text: qsTr("Exportar atajo al portapapeles (JSON)")
-                    QQC2.ToolTip.delay: 450
                 }
 
-                // Edit Inspector Capsule Glass Button
-                Rectangle {
-                    Layout.preferredWidth: editLabel.implicitWidth + 22
-                    Layout.preferredHeight: 28
-                    radius: 14
-                    color: {
-                        if (root.showEditInspector) {
-                            return Qt.rgba(CachyTheme.accentColor.r, CachyTheme.accentColor.g, CachyTheme.accentColor.b, 0.22);
-                        }
-                        if (editTap.pressed) return CachyPalette.pressedOverlay;
-                        if (editHover.hovered) return CachyPalette.cardBackgroundHover;
-                        return CachyPalette.surfacePill;
-                    }
-                    border.width: 1
-                    border.color: root.showEditInspector ? CachyTheme.accentColor : CachyPalette.specularBorder
-
-                    Behavior on color { ColorAnimation { duration: CachyTheme.animFast } }
-                    Behavior on border.color { ColorAnimation { duration: CachyTheme.animFast } }
-
-                    Text {
-                        id: editLabel
-                        anchors.centerIn: parent
-                        text: qsTr("Editar")
-                        font.pixelSize: 13
-                        font.weight: Font.Medium
-                        color: root.showEditInspector ? CachyPalette.accentText : CachyPalette.text
-                    }
-
-                    HoverHandler {
-                        id: editHover
-                        cursorShape: Qt.PointingHandCursor
-                    }
-                    TapHandler {
-                        id: editTap
-                        onTapped: root.showEditInspector = !root.showEditInspector
-                    }
-                    QQC2.ToolTip.visible: editHover.hovered
-                    QQC2.ToolTip.text: qsTr("Editar atajo seleccionado (Ctrl+E)")
-                    QQC2.ToolTip.delay: 450
+                // Edit Inspector toggle button
+                CachyToolbarButton {
+                    text: qsTr("Editar")
+                    checkable: true
+                    checked: root.showEditInspector
+                    tooltipText: qsTr("Editar atajo seleccionado (Ctrl+E)")
+                    onClicked: root.showEditInspector = !root.showEditInspector
                 }
 
-                // Search Capsule (Golden Gate Top-Right Search)
-                Rectangle {
+                // Canonical Golden Gate Search Field
+                CachySearchField {
+                    id: searchInput
                     Layout.fillWidth: true
                     Layout.minimumWidth: 110
-                    Layout.preferredHeight: 28
-                    radius: 14
-                    color: searchInput.activeFocus ? CachyPalette.cardBackgroundHover : CachyPalette.surfacePill
-                    border.width: searchInput.activeFocus ? 1.5 : 1
-                    border.color: searchInput.activeFocus ? CachyTheme.accentColor : CachyPalette.specularBorder
-
-                    Behavior on color { ColorAnimation { duration: CachyTheme.animFast } }
-                    Behavior on border.color { ColorAnimation { duration: CachyTheme.animFast } }
-
-                    RowLayout {
-                        anchors.fill: parent
-                        anchors.leftMargin: 10
-                        anchors.rightMargin: 8
-                        spacing: 6
-
-                        CachyIcon {
-                            name: "search"
-                            size: 13
-                            color: CachyPalette.textSecondary
-                        }
-
-                        TextInput {
-                            id: searchInput
-                            Layout.fillWidth: true
-                            font.pixelSize: 13
-                            color: CachyPalette.text
-                            selectionColor: CachyTheme.accentColor
-                            selectedTextColor: "#FFFFFF"
-                            clip: true
-                            verticalAlignment: TextInput.AlignVCenter
-                            onTextChanged: if (root.backend) root.backend.searchQuery = text
-
-                            Keys.onEscapePressed: {
-                                text = "";
-                                focus = false;
-                            }
-
-                            Text {
-                                anchors.fill: parent
-                                verticalAlignment: TextInput.AlignVCenter
-                                text: qsTr("Buscar")
-                                color: CachyPalette.textSecondary
-                                visible: !searchInput.text && !searchInput.activeFocus
-                                font.pixelSize: 13
-                                elide: Text.ElideRight
-                            }
-                        }
-
-                        Rectangle {
-                            Layout.preferredWidth: 15
-                            Layout.preferredHeight: 15
-                            radius: 7.5
-                            visible: searchInput.text.length > 0
-                            color: clearSearchHover.hovered ? CachyPalette.pressedOverlay : CachyPalette.hoverOverlay
-
-                            CachyIcon {
-                                anchors.centerIn: parent
-                                name: "close"
-                                size: 9
-                                color: CachyPalette.textSecondary
-                            }
-
-                            HoverHandler {
-                                id: clearSearchHover
-                                cursorShape: Qt.PointingHandCursor
-                            }
-                            TapHandler {
-                                onTapped: searchInput.text = ""
-                            }
-                        }
-                    }
+                    placeholderText: qsTr("Buscar")
+                    text: root.backend ? root.backend.searchQuery : ""
+                    onTextChanged: if (root.backend && root.backend.searchQuery !== text) root.backend.searchQuery = text
                 }
             }
         }

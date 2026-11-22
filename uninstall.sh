@@ -1,27 +1,22 @@
 #!/usr/bin/env bash
 # SPDX-FileCopyrightText: 2026 Cesar <yugurta@gmail.com>
 # SPDX-License-Identifier: GPL-3.0-or-later
-# uninstall.sh: Desinstalador limpio de KAutomator
+# uninstall.sh: Desinstalador limpio de KAutomator en /usr
 
 set -eo pipefail
 
-BIN_DIR="${HOME}/.local/bin"
-SHARE_DIR="${HOME}/.local/share/kautomator"
-APPS_DIR="${HOME}/.local/share/applications"
-SERVICEMENUS_DIR="${HOME}/.local/share/kio/servicemenus"
-SYSTEMD_DIR="${HOME}/.config/systemd/user"
-
-echo "==> Desinstalando KAutomator..."
+echo "==> Desinstalando KAutomator de /usr..."
 
 if command -v systemctl >/dev/null 2>&1; then
     systemctl --user disable --now kautomator.service 2>/dev/null || true
 fi
 
-rm -f "${BIN_DIR}/kautomator"
-rm -rf "${SHARE_DIR}"
-rm -f "${SERVICEMENUS_DIR}/org.cesar.kautomator.desktop"
-rm -f "${APPS_DIR}/org.cesar.kautomator.desktop"
-rm -f "${SYSTEMD_DIR}/kautomator.service"
+sudo -n rm -f /usr/bin/kautomator /usr/bin/kautomator-gui
+sudo -n rm -rf /usr/share/kautomator
+sudo -n rm -f /usr/share/kio/servicemenus/kautomator_servicemenu.desktop
+sudo -n rm -f /usr/share/applications/org.cesar.kautomator.desktop
+sudo -n rm -f /usr/lib/systemd/user/kautomator.service
+rm -f "${HOME}/.config/systemd/user/kautomator.service"
 
 if command -v systemctl >/dev/null 2>&1; then
     systemctl --user daemon-reload 2>/dev/null || true
@@ -31,4 +26,4 @@ if command -v kbuildsycoca6 >/dev/null 2>&1; then
     kbuildsycoca6 --noincremental >/dev/null 2>&1 || true
 fi
 
-echo "✓ Desinstalación completada."
+echo "✓ Desinstalación completada de /usr."

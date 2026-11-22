@@ -18,7 +18,7 @@ if (PROJECT_DIR / "src" / "rules.py").exists():
 elif (PROJECT_DIR / "share/kautomator/src").exists():
     LIB_DIR = PROJECT_DIR / "share/kautomator"
 else:
-    LIB_DIR = Path.home() / ".local/share/kautomator"
+    LIB_DIR = Path("/usr/share/kautomator")
 
 sys.path.insert(0, str(LIB_DIR / "src"))
 
@@ -130,7 +130,7 @@ def main():
     else:
         gui_bin = SCRIPT_DIR / "kautomator-gui"
         if not gui_bin.is_file():
-            gui_bin = Path.home() / ".local/bin/kautomator-gui"
+            gui_bin = Path("/usr/bin/kautomator-gui")
         if gui_bin.is_file() and (os.environ.get("WAYLAND_DISPLAY") or os.environ.get("DISPLAY")):
             os.execv(str(gui_bin), [str(gui_bin)])
         else:
